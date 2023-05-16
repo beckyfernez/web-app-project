@@ -86,8 +86,6 @@ Follow the deployment instructions to deploy the app to a remote server.
 
 Specifically when configuring the server on heroku, include the following environment variables:
 
-## [License](/LICENSE.md)
-
 ```sh
 DOCUMENT_ID="______"
 #google sheet API key found in the url
@@ -99,8 +97,13 @@ CREDENTIALS_FILEPATH="_______"
 ```
 ## Server Commands
 
-Run the following code in terminal to start your server:
+Run the following code in terminal to run the web app on your local computer:
+```sh
+FLASK_APP=web_app flask run
+#or store the FLASK_APP=web_app in your .env file and then you can just paste 'flask run'
+```
 
+Run the following code in terminal to start your server:
 ```sh
 ^C
 ```
