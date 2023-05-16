@@ -10,7 +10,7 @@ A Completed Repository for the [The Self-Directed "Freestyle" Project](https://g
 
 ## Installation
 
-Optionally fork this [remote repository](https://github.com/jkp53/web-app-project), to create a copy under your own control. Then "clone" or download the remote repository (or your forked copy) onto your local computer, for example to your Desktop. Then navigate to wherever you downloaded the repo:
+Optionally fork this [remote repository](https://github.com/beckyfernez/web-app-project), to create a copy under your own control. Then "clone" or download the remote repository (or your forked copy) onto your local computer, for example to your Desktop. Then navigate to wherever you downloaded the repo:
 
 ```sh
 cd ~/Desktop/python/web-app-project
