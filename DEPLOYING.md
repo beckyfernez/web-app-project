@@ -79,17 +79,11 @@ git push heroku main
 
 > NOTE: any time you update your source code, you can repeat this deployment command to upload your new code onto the server
 
-## Running the Script in Production
+## Viewing your Web App on the Heroku Server
 
-Once you've deployed the source code to the Heroku server, login to the server to see the files there, and take an opportunity to test your ability to run the script that now lives on the server:
+After you push your code to the heroku server, you will see near the bottom of a line of code that looks something like:
 
 ```sh
-heroku run bash # login to the server
-# ... whoami # see that you are not on your local computer anymore
-# ... ls -al # optionally see the files, nice!
-# ... python -m app.daily_briefing # see the output, nice!
-# ... exit # logout
-
-# or alternatively, run it from your computer, in "detached" mode:
-heroku run "python -m app.daily_briefing"
+remote: https://dining-location-reviews-app.herokuapp.com/ deployed to Heroku
 ```
+The url is where your web app lives on the internet. Feel free to copy and paste this in the browser of your choice to view your web app which is now live on the internet!
