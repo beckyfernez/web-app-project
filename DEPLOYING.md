@@ -49,14 +49,15 @@ Instead of using a ".env" file, we will directly configure the server's environm
 heroku config # at this time, results might be empty-ish
 
 # set environment variables:
+
+# set APP environment variable to production 
 heroku config:set APP_ENV="production"
 
-heroku config:set SENDGRID_API_KEY="_________"
-heroku config:set SENDER_EMAIL_ADDRESS="someone@gmail.com"
+# this is the same thing that you set for your .env file
+heroku config:set GOOGLE_SHEET_ID = "_________"
 
-heroku config:set COUNTRY_CODE="US"
-heroku config:set ZIP_CODE="20057"
-heroku config:set USER_NAME="Jon Snow"
+# you will need to copy the entire contents from your google-credentials.json file and paste them to configure the GOOGLE_CREDENTIALS environment variable
+heroku config:set GOOGLE_CREDENTIALS = "_________"
 ```
 
 At this point, you should be able to verify the production environment has been configured with the proper environment variable values:
@@ -64,6 +65,8 @@ At this point, you should be able to verify the production environment has been 
 ```sh
 heroku config
 ```
+
+Now login to heroku on the web and go to your project. First, on the Overview tab, under 'Dyno formation', you want to add the following code: `gunicorn "web_app:create_app()"`. Next, navigate to the Settings tab and find buildpacks. You will need to add two buildpacks for the app to run properly. Add the `heroku/python` buildpack and then add another buildpack by pasting the folloing url: `https://github.com/s2t2/heroku-google-application-credentials-buildpack`
 
 ## Deploying
 
