@@ -16,7 +16,7 @@ Optionally fork this [remote repository](https://github.com/beckyfernez/web-app-
 cd ~/Desktop/python/web-app-project
 ```
 
-Use Anaconda to create and activate a new virtual environment, perhaps called "briefings-env":
+Use Anaconda to create and activate a new virtual environment, perhaps called "dining-reviews-env":
 
 ```sh
 conda create -n dining-reviews-env python=3.8

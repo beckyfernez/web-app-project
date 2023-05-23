@@ -2,7 +2,7 @@ def review_upload(form_data):
 
     """
 This function connects to the google sheet in the backend and then takes the user's review score
-inputs which are stored in the form_data variable and appends them on a new row in the google sheet.
+inputs, which are stored in the form_data variable and appends them to a new row in the google sheet.
 The user doesn't have to  invoke this function. It is called automatically when the user clicks submit
 on the review 2 page. See the home_routes.py file to see where it is used.
     """
