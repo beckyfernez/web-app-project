@@ -16,11 +16,21 @@ Optionally fork this [remote repository](https://github.com/beckyfernez/web-app-
 cd ~/Desktop/python/web-app-project
 ```
 
-Use Anaconda to create and activate a new virtual environment, perhaps called "dining-reviews-env":
+Use Anaconda to create a new virtual environment, perhaps called "dining-reviews-env":
 
 ```sh
 conda create -n dining-reviews-env python=3.8
+```
+
+Activate your new virtual environment:
+
+```sh
 conda activate dining-reviews-env
+```
+OR, if your shell is not properly configured to use 'conda activate', use the following [workaround] (https://github.com/conda/conda/issues/7980):
+
+```sh
+source activate dining-reviews-env
 ```
 
 Then, within an active virtual environment, install package dependencies:
@@ -33,44 +43,37 @@ pip install -r requirements.txt
 
 First, you will need to create and download Google API credentials. To do so, follow the instructions below:
 
-isit the [Google Developer Console](https://console.cloud.google.com). Create a new project, or select an existing one. Click on your project, then from the project page, search for the "Google Sheets API" and enable it. Also search for the "Google Drive API" and enable it.
+Visit the [Google Developer Console](https://console.cloud.google.com). Create a new project, or select an existing one. Click on your project, then from the project page, search for the "Google Sheets API" and enable it. Also search for the "Google Drive API" and enable it.
 
-From either API page, or from the [API Credentials](https://console.cloud.google.com/apis/credentials) page, follow a process to create and download credentials to use the APIs:
-  1.  Click "Create Credentials" for a "Service Account". Follow the prompt to create a new service account named something like "spreadsheet-service", and add a role of "Editor"
-  2.  Click the newly created service account from the "Service Accounts" section, and click "Add Key" to cerate a new "JSON" credentials file for that service account. Download the resulting .json file (this might happen automatically).
-  3.  Rename the file "google-credentials.json". Then move a copy of the credentials file into your project repository.
+From the API page, or from the [API Credentials](https://console.cloud.google.com/apis/credentials) page, specifically manage the Google Drive API by creating your own credentials:
 
-Specifically manage the Google Drive API by creating your own credentials. 
+  1.  Click "Create Credentials" for a "Service Account". Follow the prompt to create a new service account named something like "spreadsheet-service"
+    + What API are you using? > Google Drive API
+    + Where will you be calling your API from? > Web Server
+    + What data will you be accessing? > Application Data
+    + Select Role > Basic > Editor
 
-    1. What API are you using? > Google Drive API
-    2. Where will you be calling your API from? > Web Server
-    3. What data will you be accessing? > Application Data
-    4. Select Role > Project > Editor
-    5. Key Type > JSON
+  2.  Click the newly created service account from the "Credentials" section, and click "Add Key" to create a new "JSON" credentials file for that service account. Download the resulting .json file (this might happen automatically).
 
-Move the dowloaded json file into the root directory of this repo and replace the json file name in the following python files: "review_submit.py" and "reviewaggregation.py". The change occurs in the following line of code:
+  3.  Rename the file "google-credentials.json". Then move the copy of the json credentials file into the root directory of this repo and replace the json file name in the following python files: "review_submit.py" and "reviewaggregation.py". The change occurs in the following line of code:
 
-```sh
-CREDENTIALS_FILEPATH = os.path.join(os.path.dirname(__file__),"..", "google-credentials.json")
-```
+  ```sh
+  CREDENTIALS_FILEPATH = os.path.join(os.path.dirname(__file__),"..", "google-credentials.json")
+  ```
 
-Create a new file called ".env" in the root directory of this repo, and paste the following contents inside, using your own values as appropriate:
+
+Next, utilize the locations and review data stored on our ready-made google sheet at the following [link](https://docs.google.com/spreadsheets/d/1ciNHuyNCIMAYaBFQDNCykwwdWVEZwr2Uo8TnkHcO2Qg/edit#gid=615464139). Note: You may also create your own data workbook imitating the template linked above, with the same sheet names and column headers.
+
+Lastly, create a '.env' file in your project repository. Then copy and paste the following environment variable:
 
 ```sh
 # this is the ".env" file... with environment variables
 
 #this is your google sheet specific API key in the url
-DOCUMENT_ID="________"
+GOOGLE_SHEET_ID="1ciNHuyNCIMAYaBFQDNCykwwdWVEZwr2Uo8TnkHcO2Qg"
 ```
+Note: If you created your own google workbook, as mentioned in the previous step, you will need to replace the variable with the appropriate value. 
 
-Google Sheets Format:
-
-Create two sheets named, "dining_locations" and "dining reviews".
-
-Within the "dining_locations" sheet add the following column headers: "location_id", "location_name", "location_hours", "location_logo_url"
-Within the "dining_reviews" sheet add the following column headers: "location_id", "taste_score", "health_score", "service_score", "portion_score"
-
-Input desired variables in each column.
 
 # Testing
 
