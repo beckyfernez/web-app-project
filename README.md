@@ -48,11 +48,11 @@ Visit the [Google Developer Console](https://console.cloud.google.com). Create a
 From the API page, or from the [API Credentials](https://console.cloud.google.com/apis/credentials) page, specifically manage the Google Drive API by creating your own credentials:
 
   1.  Click "Create Credentials" for a "Service Account". Follow the prompt to create a new service account named something like "spreadsheet-service"
-
-+ What API are you using? > Google Drive API
-+ Where will you be calling your API from? > Web Server
-+ What data will you be accessing? > Application Data
-+ Select Role > Basic > Editor
+  
+    1.  What API are you using? > Google Drive API
+    2.  Where will you be calling your API from? > Web Server
+    3.  What data will you be accessing? > Application Data
+    4.  Select Role > Basic > Editor
 
   2.  Click the newly created service account from the "Credentials" section, and click "Add Key" to create a new "JSON" credentials file for that service account. Download the resulting .json file (this might happen automatically).
 
