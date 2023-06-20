@@ -113,6 +113,8 @@ https://dining-location-reviews-app.herokuapp.com/
 Disclaimer - the url above is just a sample and is not functional!
 
 Now, your home page should look something like this:
+![Screenshot (371)](https://github.com/beckyfernez/web-app-project/assets/97413846/d1714fbf-78f7-43f2-9f6b-dc2dc2d1aa6a)
+
 
 ## [License](/LICENSE.md)
 
