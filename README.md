@@ -64,6 +64,7 @@ From the API page, or from the [API Credentials](https://console.cloud.google.co
 
 
 Next, utilize the locations and review data stored on our ready-made google workbook at the following [link](https://docs.google.com/spreadsheets/d/1ciNHuyNCIMAYaBFQDNCykwwdWVEZwr2Uo8TnkHcO2Qg/edit#gid=615464139). 
+
 > NOTE: You may also create your own data workbook imitating the template linked above, with the same sheet names and column headers. 
 
 Lastly, create a '.env' file in your project repository. Then copy and paste the following environment variable:
@@ -110,6 +111,7 @@ Visit your web app using the Heroku generated url. Your url may look like this:
 https://dining-location-reviews-app.herokuapp.com/
 ```
 Disclaimer - the url above is just a sample and is not functional!
+
 Now, your home page should look something like this:
 
 ## [License](/LICENSE.md)
