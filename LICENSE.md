@@ -1,11 +1,11 @@
 # License
 
-Copyright (c) 2015-2022 [John Picker](mailto:jkp53@georgetown.edu).
+Copyright (c) 2015-2022 [Rebecca Fernandez](mailto:rmf83@georgetown.edu).
 
 This work is licensed under a [Creative Commons Attribution-NonCommercial 4.0 International License](http://creativecommons.org/licenses/by-nc/4.0/), as summarized below.
 
 
-### You are free to:z
+### You are free to:
 
   + **Share** — copy and redistribute the material in any medium or format
   + **Adapt** — remix, transform, and build upon the material
