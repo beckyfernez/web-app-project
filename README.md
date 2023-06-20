@@ -1,4 +1,4 @@
-# Web App Project - Georgetown Campus Dining Reviews Web App
+# **Web App Project** - Georgetown Campus Dining Reviews
 
 A Completed Repository for the [The Self-Directed "Freestyle" Project](https://github.com/prof-rossetti/intro-to-python/tree/main/projects/freestyle).
 
@@ -109,7 +109,7 @@ Visit your web app using the Heroku generated url. Your url may look like this:
 ```sh
 https://dining-location-reviews-app.herokuapp.com/
 ```
-Disclaimer: the url above is just a sample and is not functional!
+Disclaimer - the url above is just a sample and is not functional!
 
 Now, your home page should look something like this:
 
