@@ -109,7 +109,9 @@ Visit your web app using the Heroku generated url. Your url may look like this:
 ```sh
 https://dining-location-reviews-app.herokuapp.com/
 ```
-And your home page should look something like this:
+Disclaimer: the url above is just a sample and is not functional!
+
+Now, your home page should look something like this:
 
 
 ## [License](/LICENSE.md)
