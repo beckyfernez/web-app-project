@@ -1,4 +1,4 @@
-# Web App Project
+# Web App Project - Georgetown Campus Dining Reviews Web App
 
 A Completed Repository for the [The Self-Directed "Freestyle" Project](https://github.com/prof-rossetti/intro-to-python/tree/main/projects/freestyle).
 
@@ -27,7 +27,7 @@ Activate your new virtual environment:
 ```sh
 conda activate dining-reviews-env
 ```
-OR, if your shell is not properly configured to use 'conda activate', use the following [workaround] (https://github.com/conda/conda/issues/7980):
+OR, if your shell is not properly configured to use 'conda activate', use the following [workaround](https://github.com/conda/conda/issues/7980):
 
 ```sh
 source activate dining-reviews-env
@@ -43,11 +43,11 @@ pip install -r requirements.txt
 
 First, you will need to create and download Google API credentials. To do so, follow the instructions below:
 
-Visit the [Google Developer Console](https://console.cloud.google.com). Create a new project, or select an existing one. Click on your project, then from the project page, search for the "Google Sheets API" and enable it. Also search for the "Google Drive API" and enable it.
+Visit the [Google Developer Console](https://console.cloud.google.com). Create a new project, or select an existing one. Click on your project page, and then search for the "Google Sheets API" and enable it. Next, search for the "Google Drive API" and also enable it.
 
 From the API page, or from the [API Credentials](https://console.cloud.google.com/apis/credentials) page, specifically manage the Google Drive API by creating your own credentials:
 
-  1.  Click "Create Credentials" for a "Service Account". Follow the prompt to create a new service account named something like "spreadsheet-service"
+  1.  Click "Create Credentials" for a "Service Account". Follow the prompt to create a new service account named something like "spreadsheet-service":
 
     1.  What API are you using? > Google Drive API
     2.  Where will you be calling your API from? > Web Server
@@ -63,7 +63,8 @@ From the API page, or from the [API Credentials](https://console.cloud.google.co
   ```
 
 
-Next, utilize the locations and review data stored on our ready-made google workbook at the following [link](https://docs.google.com/spreadsheets/d/1ciNHuyNCIMAYaBFQDNCykwwdWVEZwr2Uo8TnkHcO2Qg/edit#gid=615464139). Note: You may also create your own data workbook imitating the template linked above, with the same sheet names and column headers. 
+Next, utilize the locations and review data stored on our ready-made google workbook at the following [link](https://docs.google.com/spreadsheets/d/1ciNHuyNCIMAYaBFQDNCykwwdWVEZwr2Uo8TnkHcO2Qg/edit#gid=615464139). 
+> NOTE: You may also create your own data workbook imitating the template linked above, with the same sheet names and column headers. 
 
 Lastly, create a '.env' file in your project repository. Then copy and paste the following environment variable:
 
@@ -73,7 +74,7 @@ Lastly, create a '.env' file in your project repository. Then copy and paste the
 # this is your google sheet specific API key in the url
 GOOGLE_SHEET_ID="1ciNHuyNCIMAYaBFQDNCykwwdWVEZwr2Uo8TnkHcO2Qg"
 ```
-Note: If you created your own google workbook, as mentioned in the previous step, replace the environment variable with the appropriate value. 
+> NOTE: If you created your own google workbook, as mentioned in the previous step, replace the environment variable with the appropriate value. 
 
 
 # Testing
@@ -103,9 +104,13 @@ If you want to run the web app without your local server, follow the deployment 
 
 ## Remote Web App
 
-Visit your web app using the Heroku generated url. To see an example, visit our [Georgetown Campus Dining Reviews Web App](https://dining-location-reviews-app.herokuapp.com/)!
+Visit your web app using the Heroku generated url. Your url may look like this:
 
-![Screenshot (371)](https://github.com/beckyfernez/web-app-project/assets/97413846/c7aac4c0-fe17-459e-8d6f-591704a975c7)
+```sh
+https://dining-location-reviews-app.herokuapp.com/
+```
+And your home page should look something like this:
+
 
 ## [License](/LICENSE.md)
 
