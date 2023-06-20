@@ -105,6 +105,7 @@ If you want to run the web app without your local server, follow the deployment 
 
 Visit your web app using the Heroku generated url. To see an example, visit our [Georgetown Campus Dining Reviews Web App](https://dining-location-reviews-app.herokuapp.com/)!
 
+![Screenshot (371)](https://github.com/beckyfernez/web-app-project/assets/97413846/c7aac4c0-fe17-459e-8d6f-591704a975c7)
 
 ## [License](/LICENSE.md)
 
