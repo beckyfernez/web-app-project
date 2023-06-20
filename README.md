@@ -48,7 +48,7 @@ Visit the [Google Developer Console](https://console.cloud.google.com). Create a
 From the API page, or from the [API Credentials](https://console.cloud.google.com/apis/credentials) page, specifically manage the Google Drive API by creating your own credentials:
 
   1.  Click "Create Credentials" for a "Service Account". Follow the prompt to create a new service account named something like "spreadsheet-service"
-  
+
     1.  What API are you using? > Google Drive API
     2.  Where will you be calling your API from? > Web Server
     3.  What data will you be accessing? > Application Data
@@ -63,17 +63,17 @@ From the API page, or from the [API Credentials](https://console.cloud.google.co
   ```
 
 
-Next, utilize the locations and review data stored on our ready-made google sheet at the following [link](https://docs.google.com/spreadsheets/d/1ciNHuyNCIMAYaBFQDNCykwwdWVEZwr2Uo8TnkHcO2Qg/edit#gid=615464139). Note: You may also create your own data workbook imitating the template linked above, with the same sheet names and column headers.
+Next, utilize the locations and review data stored on our ready-made google workbook at the following [link](https://docs.google.com/spreadsheets/d/1ciNHuyNCIMAYaBFQDNCykwwdWVEZwr2Uo8TnkHcO2Qg/edit#gid=615464139). Note: You may also create your own data workbook imitating the template linked above, with the same sheet names and column headers. 
 
 Lastly, create a '.env' file in your project repository. Then copy and paste the following environment variable:
 
 ```sh
 # this is the ".env" file... with environment variables
 
-#this is your google sheet specific API key in the url
+# this is your google sheet specific API key in the url
 GOOGLE_SHEET_ID="1ciNHuyNCIMAYaBFQDNCykwwdWVEZwr2Uo8TnkHcO2Qg"
 ```
-Note: If you created your own google workbook, as mentioned in the previous step, you will need to replace the variable with the appropriate value. 
+Note: If you created your own google workbook, as mentioned in the previous step, replace the environment variable with the appropriate value. 
 
 
 # Testing
@@ -84,35 +84,24 @@ Run tests:
 pytest
 ```
 
-## [Deploying](/DEPLOYING.md)
-
-Follow the deployment instructions to deploy the app to a remote server.
-
-Specifically when configuring the server on heroku, include the following environment variables:
-
-```sh
-DOCUMENT_ID="______"
-#google sheet API key found in the url
-```
-
-```sh
-CREDENTIALS_FILEPATH="_______"
-#copy and paste all the contents found within your downloaded json file
-```
 ## Server Commands
 
-Run the following code in terminal to run the web app on your local computer:
+Now, you're ready to see your new website! Run the following code in terminal to run the web app on your local computer:
 ```sh
 FLASK_APP=web_app flask run
-#or store the FLASK_APP=web_app in your .env file and then you can just paste 'flask run'
+#or store the FLASK_APP=web_app in your .env file and then you can just enter 'flask run'
 ```
 
-Run the following code in terminal to start your server:
+Run the following code in terminal to shut down your local server:
 ```sh
 ^C
 ```
 
-## Web App
+## [Deploying](/DEPLOYING.md)
+
+If you want to run the web app without your local server, follow the deployment instructions to deploy the app to a remote server. 
+
+## Remote Web App
 
 Visit your web app using the Heroku generated url. To see an example, visit our [Georgetown Campus Dining Reviews Web App](https://dining-location-reviews-app.herokuapp.com/)!
 
