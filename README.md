@@ -78,7 +78,7 @@ GOOGLE_SHEET_ID="1ciNHuyNCIMAYaBFQDNCykwwdWVEZwr2Uo8TnkHcO2Qg"
 > NOTE: If you created your own google workbook, as mentioned in the previous step, replace the environment variable with the appropriate value. 
 
 
-# Testing
+## Testing
 
 Run tests:
 
@@ -94,7 +94,9 @@ FLASK_APP=web_app flask run
 #or store the FLASK_APP=web_app in your .env file and then you can just enter 'flask run'
 ```
 
-Run the following code in terminal to shut down your local server:
+Your terminal should then generate your unique url and document any navigation within your website.
+
+Lastly, run the following code in terminal to shut down your local server:
 ```sh
 ^C
 ```
@@ -102,8 +104,6 @@ Run the following code in terminal to shut down your local server:
 ## [Deploying](/DEPLOYING.md)
 
 If you want to run the web app without your local server, follow the deployment instructions to deploy the app to a remote server. 
-
-## Remote Web App
 
 Visit your web app using the Heroku generated url. Your url may look like this:
 
